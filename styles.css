@@ -99,7 +99,7 @@ li{
     }
     & input[type="checkbox"]:checked + a{
         text-decoration: line-through;
-        color: rgba(var(--main-color),0.5);
+        color: rgba(90,90,90,0.5);
     }
     & button{
         background-color: transparent;
