@@ -95,7 +95,23 @@ li{
     }
     & input[type="checkbox"]{
         transform: translate(0,3px);
-        float: right;
+        cursor: pointer;
+    }
+    & button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        height: 18px;
+        transform: translate(0,6px);
+        &:hover{
+            transform: translate(0,7px);
+        }
+    }
+    & img{
+        height: 18px;
     }
 }
 li:nth-child(even){
@@ -112,4 +128,56 @@ main a{
 }
 main a:visited{
     color: rgb(var(--main-color));
+}
+
+.notas{
+    display: grid;
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    left: 10vw;
+    top: 10vh;
+    position: fixed;
+    z-index: 100;
+    border: 1px solid black;
+    grid-template-columns: repeat(1,100%);
+    grid-template-rows: repeat(2, 30px calc(80vh - 30px));
+}
+.header-notas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29px;
+    border-bottom: 1px solid black;
+    position: relative;
+    & .nota-titulo{
+        user-select: none;
+    }
+}
+.close{
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    background-color: transparent;
+    height: 30px;
+    border: none;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    justify-self: right;
+    &:hover{
+        color: rgba(0,0,0,0.6);
+    }
+}
+.texto-nota{
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    background-color: rgba(0,0,0,0.03);
+}
+
+.hidden{
+    display: none !important;
 }

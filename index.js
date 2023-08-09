@@ -44,3 +44,12 @@ for(let i = 0; i < checkBoxes.length; i++){
 }
 completadas.innerHTML = completadasValue;
 
+const notas = document.getElementById("notas");
+const notaTitulo = document.getElementById("nota-titulo");
+const openNotas = (nombre, i) =>{
+    notas.classList.remove("hidden")
+    notaTitulo.innerHTML = `Notas <b>${nombre}</b>`;
+}
+const closeNotas = () =>{
+    notas.classList.add("hidden")
+}

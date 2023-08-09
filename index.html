@@ -15,6 +15,10 @@
         
     </head>
     <body>
+        <div class="notas hidden" id="notas">
+            <div class="header-notas"> <span class="nota-titulo" id="nota-titulo">Nota</span><button onclick="closeNotas()" class="close">X</button></div>
+            <textarea class="texto-nota" id=""></textarea>
+        </div>
         <header id="header">
             <a href="#array" draggable="false">Array</a>
             <a href="#binary" draggable="false">Binary</a>
@@ -32,7 +36,7 @@
             <h4>Completadas: <span id="completadas"></span></h4>
             <h2 id="array">Array</h2>
             <ol>
-                <li><span class="container"><a href="https://leetcode.com/problems/two-sum/" target ="_blank" class="link">Two Sum </a><span class="separator"></span><input type="checkbox" /></span></li>
+                <li><span class="container"><a href="https://leetcode.com/problems/two-sum/" target ="_blank" class="link">Two Sum </a><span class="separator"></span><button onclick="openNotas('Two Sum',0)"><img src="nota.svg"/></button><input type="checkbox" /></span></li>
                 <li><span class="container"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target ="_blank" >Best Time to Buy and Sell Stock </a><span class="separator"></span><input type="checkbox" /></span></li>
                 <li><span class="container"><a href="https://leetcode.com/problems/contains-duplicate/" target ="_blank" >Contains Duplicate </a><span class="separator"></span><input type="checkbox" /></span></li>
                 <li><span class="container"><a href="https://leetcode.com/problems/product-of-array-except-self/" target ="_blank" >Product of Array Except Self </a><span class="separator"></span><input type="checkbox" /></span></li>
