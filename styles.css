@@ -92,9 +92,6 @@ li{
         flex-grow: 1;
         order: 1;
     }
-    & div{
-        display:inline-block;
-    }
     & input[type="checkbox"]{
         transform: translate(0,3px);
         cursor: pointer;

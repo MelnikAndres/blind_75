@@ -17,7 +17,7 @@
     <body>
         <div class="notas hidden" id="notas">
             <div class="header-notas"> <span class="nota-titulo" id="nota-titulo">Nota</span><button onclick="closeNotas()" class="close">X</button></div>
-            <textarea class="texto-nota" id=""></textarea>
+            <textarea class="texto-nota" id="nota-texto" onchange="guardarNotas()"></textarea>
         </div>
         <header id="header">
             <a href="#array" draggable="false">Array</a>
