@@ -85,10 +85,12 @@ li{
     border-bottom: 1px solid rgba(var(--main-color),0.2);
     & .container{
         display: flex;
+        align-items: center;
     }
     & .separator{
         display: block;
         flex-grow: 1;
+        order: 1;
     }
     & div{
         display:inline-block;
@@ -96,6 +98,11 @@ li{
     & input[type="checkbox"]{
         transform: translate(0,3px);
         cursor: pointer;
+        order: 3;
+    }
+    & input[type="checkbox"]:checked + a{
+        text-decoration: line-through;
+        color: rgba(var(--main-color),0.5);
     }
     & button{
         background-color: transparent;
@@ -103,11 +110,13 @@ li{
         outline: none;
         cursor: pointer;
         margin: 0;
+        margin-left: 5px;
         padding: 0;
-        height: 18px;
-        transform: translate(0,6px);
+        height: 100%;
+        transform: translate(0,5px);
+        order: 2;
         &:hover{
-            transform: translate(0,7px);
+            transform: translate(0,6px);
         }
     }
     & img{
@@ -125,6 +134,7 @@ ol{
 main a{
     text-decoration: none;
     color: rgb(var(--dark-color));
+    order: 0 !important;
 }
 main a:visited{
     color: rgb(var(--main-color));

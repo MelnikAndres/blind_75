@@ -1,3 +1,4 @@
+//scroll header
 const slider = document.getElementById("header")
 let isDown = false;
 let startX;
@@ -22,6 +23,8 @@ slider.addEventListener('mousedown', (e) => {
     console.log(walk);
     
   });
+
+//guardar datos
 let completadasValue = 0;
 const completadas = document.getElementById("completadas");
 const checkBoxes = document.querySelectorAll("input[type='checkbox']");
@@ -44,9 +47,11 @@ for(let i = 0; i < checkBoxes.length; i++){
 }
 completadas.innerHTML = completadasValue;
 
+//cambiar titulo de notas
 const notas = document.getElementById("notas");
 const notaTitulo = document.getElementById("nota-titulo");
-const openNotas = (nombre, i) =>{
+const openNotas = (nodo, i) =>{
+    const nombre = nodo.parentNode.children[3].innerHTML
     notas.classList.remove("hidden")
     notaTitulo.innerHTML = `Notas <b>${nombre}</b>`;
 }
