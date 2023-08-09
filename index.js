@@ -46,6 +46,11 @@ for (let i = 0; i < checkBoxes.length; i++) {
   }
 }
 completadas.innerHTML = completadasValue;
+//guardar notas
+const guardarNotas = () => {
+  const notaTitulo = document.getElementById("nota-titulo").lastChild.innerHTML;
+  localStorage.setItem(notaTitulo, document.getElementById("nota-texto").value);
+}
 
 //cambiar titulo de notas
 const notas = document.getElementById("notas");
@@ -60,8 +65,3 @@ const closeNotas = () => {
   notas.classList.add("hidden")
 }
 
-//guardar notas
-const guardarNotas = () => {
-  const notaTitulo = document.getElementById("nota-titulo").lastChild.innerHTML;
-  localStorage.setItem(notaTitulo, document.getElementById("nota-texto").value);
-}

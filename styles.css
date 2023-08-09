@@ -93,7 +93,7 @@ li{
         order: 1;
     }
     & input[type="checkbox"]{
-        transform: translate(0,3px);
+        transform: translate(0,1px);
         cursor: pointer;
         order: 3;
     }
@@ -110,10 +110,10 @@ li{
         margin-left: 5px;
         padding: 0;
         height: 100%;
-        transform: translate(0,5px);
+        transform: translate(0,3px);
         order: 2;
         &:hover{
-            transform: translate(0,6px);
+            transform: translate(0,4px);
         }
     }
     & img{
