@@ -2,14 +2,13 @@
     font-family: 'REM', sans-serif;
     --blue: 70, 68, 203;
     --darkblue: 57, 55, 139;
-    --red: 194, 18, 18;
+    --red: 206, 20, 20;
     --darkred: 142, 11, 11;
     --green: 120, 191, 152;
     --darkgreen: 74, 131, 99;
 }
 body{
     margin: 0;
-    overflow-x: visible;
 }
 header{
     position: sticky;
@@ -38,27 +37,27 @@ header a{
     user-select: none;
     cursor: pointer;
 }
+
+h2,h4,h1{
+    text-align: center;
+}
+
 h1{
     font-weight: 600;
-    text-align: center;
     margin: 20px 0 0 0;
 }
 h4{
     margin: 0;
 }
-h2,h4{
-    text-align: center;
-}
+
 main{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    
 }
 ol:nth-child(3n){
     --main-color: var(--blue);
     --dark-color: var(--darkblue);
 }
-
 
 ol:nth-child(3n + 2){
     --main-color: var(--red);
@@ -84,23 +83,23 @@ li{
     line-height: 1.5rem;
     position: relative;
     border-bottom: 1px solid rgba(var(--main-color),0.2);
+    & .container{
+        display: flex;
+    }
+    & .separator{
+        display: block;
+        flex-grow: 1;
+    }
+    & div{
+        display:inline-block;
+    }
+    & input[type="checkbox"]{
+        transform: translate(0,3px);
+        float: right;
+    }
 }
 li:nth-child(even){
     border-bottom: 1px solid rgba(var(--dark-color),0.15);
-}
-li .container{
-    display: flex;
-}
-li .separator{
-    display: block;
-    flex-grow: 1;
-}
-li div{
-    display:inline-block;
-}
-input[type="checkbox"]{
-    transform: translate(0,3px);
-    float: right;
 }
 
 ol{
