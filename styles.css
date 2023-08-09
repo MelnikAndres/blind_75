@@ -1,0 +1,116 @@
+*{
+    font-family: 'REM', sans-serif;
+    --blue: 70, 68, 203;
+    --darkblue: 57, 55, 139;
+    --red: 194, 18, 18;
+    --darkred: 142, 11, 11;
+    --green: 120, 191, 152;
+    --darkgreen: 74, 131, 99;
+}
+body{
+    margin: 0;
+    overflow-x: visible;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    height: 60px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: white;
+    z-index: 100;
+    cursor: normal;
+}
+header::-webkit-scrollbar{
+    display: none;
+}
+header a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+}
+h1{
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+h4{
+    margin: 0;
+}
+h2,h4{
+    text-align: center;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    
+}
+ol:nth-child(3n){
+    --main-color: var(--blue);
+    --dark-color: var(--darkblue);
+}
+
+
+ol:nth-child(3n + 2){
+    --main-color: var(--red);
+    --dark-color: var(--darkred);
+}
+
+ol:nth-child(3n + 4){
+    --main-color: var(--green);
+    --dark-color: var(--darkgreen);
+}
+ol{
+    &  li::marker{
+        color: rgb(var(--main-color));
+    }
+    & li:nth-child(2n)::marker{
+        color: rgb(var(--dark-color)) !important;
+    }
+}
+
+li{
+    margin: 2px 0;
+    padding: 2px 0;
+    line-height: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid rgba(var(--main-color),0.2);
+}
+li:nth-child(even){
+    border-bottom: 1px solid rgba(var(--dark-color),0.15);
+}
+li .container{
+    display: flex;
+}
+li .separator{
+    display: block;
+    flex-grow: 1;
+}
+li div{
+    display:inline-block;
+}
+input[type="checkbox"]{
+    transform: translate(0,3px);
+    float: right;
+}
+
+ol{
+    width: fit-content;
+    justify-self: center;
+}
+main a{
+    text-decoration: none;
+    color: rgb(var(--dark-color));
+}
+main a:visited{
+    color: rgb(var(--main-color));
+}
